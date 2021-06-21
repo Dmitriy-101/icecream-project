@@ -1,0 +1,131 @@
+// для описания стилей всех кнопок
+.btn-primary {
+  @include flex-center;
+  padding: 11px 25px;
+
+  font-family: $primary-font;
+  @include font(700, 14px, 18px, 0em);
+
+  color: $primary-color;
+  background: $secondary-color;
+  border-radius: 22px;
+  border-color: transparent;
+
+  transition: color 250ms linear, background-color 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: $secondary-color;
+    background: $primary-color;
+  }
+
+  // базовая розовая кнопка
+  &_acent {
+    color: $secondary-color;
+    background: $primary-color;
+
+    &:hover,
+    &:focus {
+      color: $primary-color;
+      background: $secondary-color;
+    }
+  }
+
+  // кнопка бай нау в мобильном меню
+  &_mobile {
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  // кнопка бай нау в секции хэдэр
+  &_header {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      margin-left: 30px;
+    }
+  }
+
+  // для кнопок в секции хиро
+  // это вообще нужно и работает ли??
+  &_position {
+    position: sticky;
+    z-index: 50;
+  }
+
+  // розовая кнопка в секции контактс
+  &_margin-acent {
+    @media screen and(max-width:767px) {
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+
+    @media screen and(min-width:768px) {
+      margin-right: 15px;
+    }
+  }
+
+  // белая кнопка в секции контактс
+  &_margin-light {
+    @media screen and(max-width:767px) {
+      margin: 0 auto;
+    }
+  }
+}
+
+// стрелочка-иконка для кнопки
+.icon-arrow-right {
+  margin-left: 10px;
+  fill: currentColor;
+  width: 15px;
+  height: 10px;
+
+  // &_margin {
+  //   margin-left: 17px;
+  //   @media screen and (min-width: 768px) {
+  //     margin-left: 15px;
+  //   }
+  // }
+}
+
+// кнопка закрытия
+.close-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: transparent;
+
+  background-color: transparent;
+  fill: $secondary-color;
+
+  cursor: pointer;
+  transition: fill 250ms linear;
+
+  &:hover,
+  &:focus {
+    fill: $primary-color;
+  }
+
+  &__modal {
+    top: 8px;
+    right: 8px;
+  }
+
+  &__mobile {
+    top: 20px;
+    right: 25px;
+
+    &:hover,
+    &:focus {
+      fill: $primary-color;
+    }
+
+    @media screen and (min-width: 1280px) {
+      right: 34px;
+    }
+  }
+}

@@ -1,0 +1,236 @@
+.products {
+  padding-top: 121px;
+  padding-bottom: 98px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 122px;
+    padding-bottom: 112px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
+}
+
+.products .container {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.products__social_list {
+  margin-top: 144px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-top: 157px;
+    margin-left: -20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 259px;
+  }
+}
+
+.products__social_item {
+  position: relative;
+  border-radius: 24px;
+  padding-top: 161px;
+  padding-bottom: 111px;
+  border: 1px solid transparent;
+
+  @media screen and(max-width:767px) {
+    &:not(:last-child) {
+      margin-bottom: 130px;
+    }
+  }
+
+  @media screen and(min-width:768px) {
+    padding-top: 152px;
+    padding-bottom: 120px;
+
+    flex-basis: calc(100% / 3 - 20px);
+    margin-left: 20px;
+    align-content: flex-start;
+    width: 220px;
+
+    &:before {
+      top: 195px;
+    }
+  }
+
+  @media screen and(min-width:1280px) {
+    padding-top: 163px;
+    padding-bottom: 152px;
+
+    width: 335px;
+    flex-basis: calc(100% / 3 - 24px);
+    margin-left: 24px;
+
+    &:before {
+      top: 215px;
+    }
+  }
+
+  &:before {
+    content: '. . .';
+    position: absolute;
+    left: 45%;
+    top: 205px;
+    font-family: $acent-font;
+    @include font(400, 20px, 23px, 0.04em);
+    color: $secondary-color;
+  }
+}
+
+.ice_cream {
+  background-color: #ffb8ca;
+}
+
+.ice_coffee {
+  background-color: #f0d1a5;
+}
+
+.milkshakes {
+  background-color: #c2e297;
+}
+
+.products__img {
+  position: absolute;
+  bottom: 71%;
+  left: 15px;
+  width: 249px;
+  height: 252px;
+
+  @media screen and (min-width: 768px) {
+    bottom: 76%;
+    left: 0%;
+    width: 220px;
+    height: 226px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    bottom: 80%;
+    left: 0%;
+    width: 335px;
+    height: 335px;
+  }
+}
+
+.products__social_title {
+  font-family: $acent-font;
+  @include font(400, 20px, 23px, 0.04em);
+  text-transform: uppercase;
+
+  color: $secondary-color;
+  margin-bottom: 66px;
+
+  @media screen and (min-width: 1280px) {
+    @include font(400, 30px, 34px, 0.04em);
+    margin-bottom: 70px;
+  }
+}
+
+.products__social_text {
+  display: inline-block;
+  font-family: $primary-font;
+  @include font(700, 14px, 21px, 0.04em);
+  width: 200px;
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  color: $secondary-color;
+
+  @media screen and (min-width: 768px) {
+    @include font(700, 14px, 25px, 0.04em);
+    width: 198px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    @include font(700, 16px, 28px, 0.04em);
+    width: 241px;
+  }
+}
+
+// круглая белая кнопка
+
+.product-overlay {
+  position: absolute;
+  bottom: 41px;
+  right: 50%;
+  z-index: 5;
+  transform: translateX(50%);
+  @media screen and (min-width: 768px) {
+    bottom: 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    bottom: 50px;
+  }
+}
+.product-overlay__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.product-overlay__position {
+  background: linear-gradient(#f88ca5, $first-card-bgcolor);
+  border-top: 4px solid #ffffff;
+  border-radius: 24px;
+  overflow-y: auto;
+  transform: translateY(0);
+  opacity: 0;
+  transition: opacity 250ms linear, transform 250ms linear;
+}
+.products__overlay_text {
+  min-width: 279px;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+  @media screen and (min-width: 768px) {
+    min-width: 219px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    min-width: 329px;
+  }
+}
+.products__btn:hover + .product-overlay__position,
+.products__btn:focus + .product-overlay__position {
+  transform: translateY(-10%);
+  opacity: 1;
+}
+.products__btn {
+  transform: rotate(0);
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  border-radius: 50%;
+  border: transparent;
+  fill: $primary-color;
+  background-color: $secondary-color;
+
+  transition: background-color 250ms linear, fill 250ms linear, transform 250ms linear;
+
+  &:hover,
+  &:focus {
+    fill: $secondary-color;
+    background-color: $primary-color;
+    transform: rotate(-90deg);
+  }
+}
+
+.products__btn_icon {
+  width: 10px;
+  height: 10px;
+}
+.position-coffe {
+  background: linear-gradient(#e8c086, $second-card-bgcolor);
+}
+.position-milk {
+  background: linear-gradient(#acd17b, $third-card-bgcolor);
+}

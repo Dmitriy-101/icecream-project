@@ -1,0 +1,167 @@
+<header class="header">
+  <a href="#home" class="home__link link scrollto home__link_fixed">home</a>
+  <div class="header__container container">
+    <a href="index.html" class="link logo__link wow animate__animated animate__zoomInLeft">
+      <svg class="icon__logo" width="50" height="50">
+        <use href="./images/sprite/sprite.svg#icon-ice-cream-logo"></use>
+      </svg>
+      <div class="logo__text">
+        <!-- ICECREAM -->
+        <div class="logo__text_animate">I</div>
+        <div class="logo__text_animate">C</div>
+        <div class="logo__text_animate">E</div>
+        <div class="logo__text_animate">C</div>
+        <div class="logo__text_animate">R</div>
+        <div class="logo__text_animate">E</div>
+        <div class="logo__text_animate">A</div>
+        <div class="logo__text_animate">M</div>
+      </div>
+    </a>
+
+    <nav class="navigation">
+      <ul class="list navigation__list">
+        <li class="navigation__item">
+          <a href="#home" class="navigation__link link scrollto">Home</a>
+        </li>
+        <li class="navigation__item">
+          <div>
+            <a href="#about-us" class="navigation__link link scrollto">About us</a>
+          </div>
+        </li>
+        <li class="navigation__item">
+          <a href="#how-its-made" class="navigation__link link scrollto">How it's made?</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#our-products" class="navigation__link link scrollto">Our products</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#contact" class="navigation__link link scrollto">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__menu_btn">
+      <!-- иконка бургер меню -->
+      <button class="burger-btn" type="button" data-modal-open>
+        <svg class="icon-burger" width="30" height="32">
+          <use href="./images/sprite/sprite.svg#icon-menu"></use>
+        </svg>
+      </button>
+
+      <!-- бай нау в хэдэре -->
+      <button type="button" class="btn-primary btn-primary_header" data-modal-open3>
+        Buy now
+        <svg class="icon-arrow-right">
+          <use href="./images/sprite/sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- MOBILE MENU/МОБИЛЬНОЕ МЕНЮ -->
+
+  <!-- для моб.меню -->
+  <div class="backdrop is-hidden_modal" data-modal>
+    <div class="mobile-menu">
+      <!-- кнопка закрытия моб.меню -->
+      <button class="close-btn close-btn__mobile" type="button" data-modal-close>
+        <svg class="close-btn__mobile-icon" width="30" height="30">
+          <use href="./images/sprite/sprite.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+
+      <!-- кнопка бай нау в моб.меню -->
+      <button
+        type="button"
+        class="btn-primary btn-primary_mobile"
+        data-modal-open4
+        data-modal-close
+      >
+        Buy now
+        <svg class="icon-arrow-right icon-arrow-right_margin">
+          <use href="./images/sprite/sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+
+      <nav class="mobile-menu__navigation">
+        <ul class="list mobile-menu__list">
+          <li class="mobile-menu__item mobile-menu__item-dash">
+            <a href="#home" class="mobile-menu__link link scrollto" data-modal-close>Home</a>
+          </li>
+          <li class="mobile-menu__item mobile-menu__item-dash">
+            <a href="#about-us" class="mobile-menu__link link scrollto" data-modal-close
+              >About us</a
+            >
+          </li>
+          <li class="mobile-menu__item mobile-menu__item-dash">
+            <a href="#how-its-made" class="mobile-menu__link link scrollto" data-modal-close
+              >How it's made?</a
+            >
+          </li>
+          <li class="mobile-menu__item mobile-menu__item-dash">
+            <a href="#our-products" class="mobile-menu__link link scrollto" data-modal-close
+              >Our products</a
+            >
+          </li>
+          <li class="mobile-menu__item mobile-menu__item-dash mobile-menu__item-dash_bottom">
+            <a href="#contact" class="mobile-menu__link link scrollto" data-modal-close>Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- модальное окно кнопки buy-now -->
+  <div class="backdrop is-hidden" data-modal3 data-modal4>
+    <div class="modal is-hidden__modal">
+      <!-- закрытие модального окна кнопки бай нау(в хэдэре) -->
+      <button type="button" class="close-btn close-btn__modal" data-modal-close3>
+        <svg class="modal__icon-close" width="30" height="30">
+          <use href="./images/sprite/sprite.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+      <!-- закрытие модального окна кнопки бай нау(в моб.меню) -->
+      <button type="button" class="close-btn close-btn__modal" data-modal-close4>
+        <svg class="modal__icon-close" width="30" height="30">
+          <use href="./images/sprite/sprite.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+      <h3 class="modal__title">
+        Do you want <span class="modal__title_suptitle"> the most delicious ice cream?</span>
+      </h3>
+      <form action="#" class="modal-form" autocomplete="off">
+        <label for="name" class="modal-form__label">Your name</label>
+        <input
+          type="text"
+          name="user-name"
+          id="name"
+          class="modal-form__input"
+          minlength="2"
+          required
+          autocomplete="off"
+        />
+
+        <label for="phone" class="modal-form__label">Your phone number</label>
+        <input
+          type="tel"
+          name="user-phone"
+          id="phone"
+          class="modal-form__input"
+          title="+61(0)383766284"
+          pattern="[^0-9]{1}[0-9]{2}[^0-9]{1}[0-9]{1}[^0-9]{1}[0-9]{3}[0-9]{3}[0-9]{3}"
+          required
+        />
+
+        <label for="comment" class="modal-form__label">Comment</label>
+        <textarea
+          class="modal-form__textarea"
+          name="user-comment"
+          id="comment"
+          placeholder="Enter text"
+          required
+        ></textarea>
+
+        <button type="submit" class="btn-primary modal__btn">Send</button>
+      </form>
+    </div>
+  </div>
+</header>

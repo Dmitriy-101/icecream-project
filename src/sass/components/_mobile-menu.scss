@@ -1,0 +1,50 @@
+// для описания стилей мобильного меню
+.mobile-menu {
+  position: absolute;
+  z-index: 503;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 60px 21px;
+  background-color: $mobile-bgcolor;
+  transform: translateX(0);
+  transition: transform 250ms linear;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+
+  @media screen and (min-width: 768px) {
+    width: 40vw;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.is-hidden_modal {
+  transform: translateX(100%);
+}
+
+// для описания стилей мобильного меню
+.mobile-menu__link {
+  @include font(700, 14px, 18px, 0em);
+  color: $secondary-color;
+
+  &:hover,
+  &:focus {
+    color: $primary-color;
+  }
+}
+
+.mobile-menu__item-dash {
+  border-top: 1px solid $dash-mobmenu-color;
+  padding: 12px 0px 12px;
+}
+
+.mobile-menu__item-dash_bottom {
+  border-bottom: 1px solid $dash-mobmenu-color;
+  margin-right: 35px;
+  width: 100%;
+}

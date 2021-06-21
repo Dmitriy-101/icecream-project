@@ -1,0 +1,147 @@
+<section id="how-its-made" class="about">
+  <div id="how-its-made-hero" class="container">
+    <p class="suptitle suptitle_center">tradition and love</p>
+    <h2 class="title title-about title_center wow animate__animated animate__zoomInLeft">how it’s made?</h2>
+
+    <div class="flex-box">
+      <!-- изображение коровы с кувшином молока -->
+      <div class="cow-image-box">
+        <picture
+          ><source
+            srcset="
+              ./images/desktop/about/cowmilkd1@1x.webp 1x,
+              ./images/desktop/about/cowmilkd1@2x.webp 2x
+            "
+            media="(min-width:1280px)"
+            type="image/webp" />
+
+          <source
+            srcset="
+              ./images/desktop/about/cowmilkd1@1x.png 1x,
+              ./images/desktop/about/cowmilkd1@2x.png 2x
+            "
+            media="(min-width:1280px)"
+            type="image/png" />
+
+          <source
+            srcset="
+              ./images/tablet/about/cowmilkt1@1x.webp 1x,
+              ./images/tablet/about/cowmilkt1@2x.webp 2x
+            "
+            media="(min-width:768px)"
+            type="image/webp" />
+          <source
+            srcset="
+              ./images/tablet/about/cowmilkt1@1x.png 1x,
+              ./images/tablet/about/cowmilkt1@2x.png 2x
+            "
+            media="(min-width:768px)"
+            type="image/png" />
+
+          <source
+            srcset="
+              ./images/mobile/about/cowmilkm1@1x.webp 1x,
+              ./images/mobile/about/cowmilkm1@2x.webp 2x
+            "
+            media="(min-width:480px)"
+            type="image/webp" />
+          <source
+            srcset="
+              ./images/mobile/about/cowmilkm1@1x.png 1x,
+              ./images/mobile/about/cowmilkm1@2x.png 2x
+            "
+            media="(min-width:480px)"
+            type="image/png" />
+          <img
+            src="./images/mobile/about/cowmilkm1@1x.png"
+            alt="кувшин молока био-эко и изображение коровы"
+        /></picture>
+      </div>
+
+      <div class="description-box">
+        <p class="lead">
+          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
+          lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
+        </p>
+        <p class="description">
+          Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula
+          volutpat, aimus. Cras massa nibh, tincidunt.
+        </p>
+        <p class="text">Aliquam erat volutpat. Aenean accumsan.</p>
+
+        <button class="btn-primary" type="button" data-modal-open10>
+          Read more
+          <svg class="icon-arrow-right">
+            <use href="./images/sprite/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- фоновое изображение  всплеск молока -->
+  <div class="milk-image-box">
+    <picture>
+      <source
+        srcset="
+          ./images/desktop/about/milkboxd1@1x.webp 1x,
+          ./images/desktop/about/milkboxd1@2x.webp 2x
+        "
+        media="(min-width:1280px)"
+        type="image/webp"
+      />
+      <source
+        srcset="
+          ./images/desktop/about/milkboxd1@1x.png 1x,
+          ./images/desktop/about/milkboxd1@2x.png 2x
+        "
+        media="(min-width:1280px)"
+        type="image/png"
+      />
+
+      <source
+        srcset="
+          ./images/mobile/about/milkboxm1@1x.webp 1x,
+          ./images/mobile/about/milkboxm1@2x.webp 2x
+        "
+        media="(min-width:480px)"
+        type="image/webp"
+      />
+      <source
+        srcset="
+          ./images/mobile/about/milkboxm1@1x.png 1x,
+          ./images/mobile/about/milkboxm1@2x.png 2x
+        "
+        media="(min-width:480px)"
+        type="image/png"
+      />
+      <img src="./images/mobile/about/milkboxm1@1x.png" alt="всплеск молока фоновое изображение" />
+    </picture>
+  </div>
+
+  <!-- модальное окно с детальным описанием продукта -->
+  <div class="backdrop is-hidden" data-modal10>
+    <div class="modal">
+      <h3 class="modal__title">
+        How to Make <span class="modal__title_suptitle">Vanilla Ice Cream</span>
+      </h3>
+      <p class="modal__description">
+        Stir sugar, cream, and milk into a saucepan over low heat until sugar has dissolved. ...
+        Transfer cream mixture to a pourable container such as a large measuring cup. ... Pour cold
+        ice cream mix into an ice cream maker, turn on the machine, and churn according to
+        manufacturer's directions, 20 to 25 minutes.
+      </p>
+      <p class="modal__description_dark">
+        Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Aenean accumsan.
+        Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
+      </p>
+
+      <!-- кнопка закрытия модального окна -->
+      <button type="button" class="close-btn close-btn__modal" data-modal-close10>
+        <svg class="close-btn__modal-icon" width="30" height="30">
+          <use href="./images/sprite/sprite.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
